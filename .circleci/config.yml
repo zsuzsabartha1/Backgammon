@@ -9,7 +9,7 @@ jobs:
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
     docker:
-      - image: cimg/base:stable
+      - image: cimg/node:17.5.0
     # Add steps to the job
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
@@ -19,7 +19,7 @@ jobs:
           command: "cd ui"
       - run:
           name: "Run Yarn"
-          command: "npm run yarn build:prod"
+          command: "yarn build:prod"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
