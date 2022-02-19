@@ -15,12 +15,7 @@ jobs:
     # working_directory: ~/
     steps:
       - checkout
-      - run:
-          name: "pwd and ls"
-          command: "pwd && ls"
-      - run:
-          name: "change dir"
-          shell: "cd ui"
+        path: ~/ui
       - run:
           name: "pwd and ls"
           command: "pwd && ls"
