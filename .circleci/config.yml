@@ -15,7 +15,7 @@ jobs:
     working_directory: ~/backgammon/ui
     steps:
       - checkout:
-        path: ~/ui
+          path: ~/ui
       - run:
           name: "pwd and ls"
           command: "pwd && ls"
