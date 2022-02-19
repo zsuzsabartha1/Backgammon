@@ -25,10 +25,25 @@ jobs:
       - run:
           name: "Run yarn:build"
           command: "yarn build:prod"
+  build-backend:
+    docker:
+      - image: mcr.microsoft.com/dotnet/sdk:6.0
+    steps:
+      - checkout
+      - run:
+          name: "pwd and ls"
+          command: "pwd && ls"
+      - run:
+          name: "Run dotnet restore"
+          command: "dotnet restore"
+      - run:
+          name: "compile"
+          command: "dotnet build"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
   build-workflow:
     jobs:
-      - build-ui
+      # - build-ui
+      - build-backend
