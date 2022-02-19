@@ -12,18 +12,15 @@ jobs:
       - image: cimg/node:17.5.0
     # Add steps to the job
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
+    working_directory: ~/ui
     steps:
       - checkout
       - run:
-          name: "CD to ui"
-          command: "cd ./ui"
-      - run:
           name: "pwd and ls"
           command: "pwd && ls"
-
-      # - run:
-      #     name: "Run Yarn"
-      #     command: "yarn build:prod"
+      - run:
+          name: "Run Yarn"
+          command: "yarn build:prod"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
