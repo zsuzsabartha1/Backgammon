@@ -103,7 +103,6 @@ namespace BackendTests
         }
 
         [TestMethod]
-        [Ignore("Fix later")]
         public void BearOffEffectivelyBlack()
         {
             var game = Game.Create(false);
