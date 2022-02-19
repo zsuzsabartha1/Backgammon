@@ -17,6 +17,7 @@ jobs:
       - run:
           name: "CD to ui"
           command: "cd ui"
+        run:
           name: "Run Yarn"
           command: "yarn build:prod"
 
