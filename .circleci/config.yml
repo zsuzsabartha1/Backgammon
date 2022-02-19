@@ -42,7 +42,7 @@ jobs:
       - run:
           name: "Test"
           command: "dotnet test"
-      - store_test_results:
+      - store_artifacts:
           path: TestResults
 
 # Invoke jobs via workflows
