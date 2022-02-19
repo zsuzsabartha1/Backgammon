@@ -20,7 +20,10 @@ jobs:
           name: "pwd and ls"
           command: "pwd && ls"
       - run:
-          name: "Run Yarn"
+          name: "Run yarn"
+          command: "yarn"
+      - run:
+          name: "Run yarn:build"
           command: "yarn build:prod"
 
 # Invoke jobs via workflows
