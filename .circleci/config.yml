@@ -41,8 +41,8 @@ jobs:
           command: "dotnet build"
       - run:
           name: "Test"
-          command: "dotnet test"
-      - store_artifacts:
+          command: 'dotnet test -l:"junit;LogFileName=TestOutput.xml" -r:"TestResults"'
+      - store_test_results:
           path: TestResults
 
 # Invoke jobs via workflows
